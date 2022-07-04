@@ -1,3 +1,15 @@
+# Frontend Mentor - Space tourism website
+
+![Design preview for the Space tourism website coding challenge](./preview.jpg)
+
+## The challenge
+[Build a website for the future of space travel!](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3)🚀
+
+Your users should be able to:
+- View the optimal layout for each of the website's pages depending on their device's screen size
+- See hover states for all interactive elements on the page
+- View each page and be able to toggle between the tabs to see new information
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
