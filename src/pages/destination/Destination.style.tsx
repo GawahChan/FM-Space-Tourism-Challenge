@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PageContainer } from "../Shared.style";
+import { PageContainer } from "../pages.style";
 import { device } from "../../utils/Constants";
 
 export const DestinationPageContainer = styled(PageContainer)`

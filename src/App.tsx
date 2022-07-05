@@ -1,11 +1,13 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import "./App.css";
-import Crew from "./pages/crew/Crew";
-import Destination from "./pages/destination/Destination";
-import Home from "./pages/home/Home";
-import Technologypage from "./pages/technology/Technology";
 import NavBar from "./components/navBar/NavBar";
+import Home from "./pages/home/Home";
+import Destination from "./pages/destination/Destination";
+import Crew from "./pages/crew/Crew";
+import Technologypage from "./pages/technology/Technology";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./utils/styles/GlobalStyles";
+import { theme } from "./utils/styles/Theme";
 
 import {
   HOME_URL,
@@ -17,13 +19,16 @@ import {
 const App = () => {
   return (
     <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path={HOME_URL} element={<Home />} />
-        <Route path={DESTINATION_URL} element={<Destination />} />
-        <Route path={CREW_URL} element={<Crew />} />
-        <Route path={TECHNOLOGY_URL} element={<Technologypage />} />
-      </Routes>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <NavBar />
+        <Routes>
+          <Route path={HOME_URL} element={<Home />} />
+          <Route path={DESTINATION_URL} element={<Destination />} />
+          <Route path={CREW_URL} element={<Crew />} />
+          <Route path={TECHNOLOGY_URL} element={<Technologypage />} />
+        </Routes>
+      </ThemeProvider>
     </BrowserRouter>
   );
 };
