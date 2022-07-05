@@ -4,6 +4,10 @@ import styled from "styled-components";
 export const NavBarContainer = styled.div`
   display: flex;
   justify-content: flex-end;
+
+  position: fixed;
+  width: 100%;
+  border: 1px solid red;
 `;
 
 export const NavBarLink = styled(Link)`
