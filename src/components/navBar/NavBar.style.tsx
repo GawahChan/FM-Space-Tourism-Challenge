@@ -4,11 +4,11 @@ import { device } from "../../utils/Constants";
 
 export const NavBarContainer = styled.div`
   display: flex;
-  justify-content: flex-end;
 
   position: fixed;
   width: 100%;
-  border: 1px solid red;
+  box-sizing: border-box;
+  padding-top: 20px;
 `;
 
 export const NavBarLogoContainer = styled.div`
@@ -23,9 +23,10 @@ export const NavBarLogoContainer = styled.div`
 
 export const NavBarHeaderContainer = styled.div`
   display: flex;
-  flex: 1;
-  justify-content: space-around;
+  flex: 2;
+  justify-content: flex-end;
 
+  backdrop-filter: blur(10px);
   box-sizing: border-box;
   padding: 10px;
 
@@ -40,6 +41,7 @@ export const NavBarHeader = styled.h1`
   font-size: ${({ theme }) => theme.fontSize.navText};
   letter-spacing: ${({ theme }) => theme.characterSpace.navText};
   font-weight: normal;
+  margin: 10px;
 `;
 
 export const NavBarLink = styled(Link)`

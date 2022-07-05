@@ -6,8 +6,8 @@ export const theme = {
     navText: "#FFFFFF",
   },
   typography: {
-    primary: "Bellefair Regular",
-    secondary: "Barlow Condensed Regular",
+    primary: "Bellefair",
+    secondary: "Barlow Condensed",
   },
   fontSize: {
     heading1: "150px",
