@@ -4,7 +4,7 @@ import {
   HOME_URL,
   TECHNOLOGY_URL,
 } from "../../utils/Constants";
-import { NavBarContainer, NavBarHeader, NavBarLink } from "./style";
+import { NavBarContainer, NavBarHeader, NavBarLink } from "./NavBar.style";
 
 const NavBar = () => {
   return (
