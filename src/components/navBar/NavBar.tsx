@@ -8,7 +8,7 @@ import {
   NavBarContainer,
   NavBarHeader,
   NavBarHeaderContainer,
-  NavBarLink,
+  NavLink,
   NavBarLogoContainer,
 } from "./NavBar.style";
 
@@ -18,23 +18,23 @@ const NavBar = () => {
   return (
     <NavBarContainer>
       <NavBarLogoContainer>
-        <NavBarLink to={HOME_URL}>
+        <NavLink to={HOME_URL}>
           <img src={Logo} alt="logo" />
-        </NavBarLink>
+        </NavLink>
       </NavBarLogoContainer>
       <NavBarHeaderContainer>
-        <NavBarLink to={HOME_URL}>
+        <NavLink to={HOME_URL}>
           <NavBarHeader>00 HOME</NavBarHeader>
-        </NavBarLink>
-        <NavBarLink to={DESTINATION_URL}>
+        </NavLink>
+        <NavLink to={DESTINATION_URL}>
           <NavBarHeader>01 DESTINATION</NavBarHeader>
-        </NavBarLink>
-        <NavBarLink to={CREW_URL}>
+        </NavLink>
+        <NavLink to={CREW_URL}>
           <NavBarHeader>02 CREW</NavBarHeader>
-        </NavBarLink>
-        <NavBarLink to={TECHNOLOGY_URL}>
+        </NavLink>
+        <NavLink to={TECHNOLOGY_URL}>
           <NavBarHeader>03 TECHNOLOGY</NavBarHeader>
-        </NavBarLink>
+        </NavLink>
       </NavBarHeaderContainer>
     </NavBarContainer>
   );

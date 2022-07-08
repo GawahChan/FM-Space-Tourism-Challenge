@@ -6,8 +6,8 @@ import Technologypage from "./pages/technology/Technology";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyles } from "./utils/styles/GlobalStyles";
-import { theme } from "./utils/styles/Theme";
+import { GlobalStyles } from "./styles/GlobalStyles";
+import { theme } from "./styles/themes/Theme";
 
 import {
   HOME_URL,

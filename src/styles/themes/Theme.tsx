@@ -9,6 +9,9 @@ export const theme = {
     primary: "Bellefair",
     secondary: "Barlow Condensed",
   },
+  fontWeight: {
+    regular: "normal",
+  },
   fontSize: {
     heading1: "150px",
     heading2: "100px",

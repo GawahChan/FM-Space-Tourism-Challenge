@@ -58,7 +58,7 @@ export const NavBarHeader = styled.h1`
   }
 `;
 
-export const NavBarLink = styled(Link)`
+export const NavLink = styled(Link)`
   text-decoration: none;
   cursor: pointer;
 `;
