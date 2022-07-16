@@ -1,34 +1,8 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { device } from "../../utils/Constants";
+import { device } from "../../../utils/Constants";
+import { NavLink } from "../Navigation.style";
 
 export const NavBarContainer = styled.div`
-  display: flex;
-
-  position: fixed;
-  width: 100%;
-  box-sizing: border-box;
-  padding-top: 20px;
-
-  @media ${device.tablet} {
-    padding: 0;
-  }
-
-  @media ${device.mobile} {
-    padding: 0;
-  }
-`;
-
-export const NavBarLogoContainer = styled.div`
-  display: flex;
-  flex: 1;
-  align-items: center;
-
-  box-sizing: border-box;
-  padding: 20px 30px 20px 30px;
-`;
-
-export const NavBarHeaderContainer = styled.div`
   display: flex;
   flex: 1;
   justify-content: space-evenly;
@@ -36,7 +10,6 @@ export const NavBarHeaderContainer = styled.div`
 
   box-sizing: border-box;
   backdrop-filter: blur(10px);
-  padding: 10px;
 
   @media ${device.tablet} {
     flex: 2;
@@ -50,15 +23,18 @@ export const NavBarHeader = styled.h1`
   font-size: ${({ theme }) => theme.fontSize.navText};
   letter-spacing: ${({ theme }) => theme.characterSpace.navText};
   font-weight: normal;
-  margin: 10px;
+`;
+
+export const NavBarHeaderContainer = styled.div`
+  display: flex;
   height: 100%;
+  align-items: center;
 
   :hover {
     border-bottom: 3px solid ${({ theme }) => theme.colours.navText};
   }
 `;
 
-export const NavLink = styled(Link)`
-  text-decoration: none;
-  cursor: pointer;
+export const NavBarLink = styled(NavLink)`
+  height: 100%;
 `;

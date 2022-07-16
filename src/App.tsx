@@ -1,4 +1,4 @@
-import NavBar from "./components/navBar/NavBar";
+import Navigation from "./components/navigation/Navigation";
 import Home from "./pages/home/Home";
 import Destination from "./pages/destination/Destination";
 import Crew from "./pages/crew/Crew";
@@ -21,7 +21,7 @@ const App = () => {
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <NavBar />
+        <Navigation />
         <Routes>
           <Route path={HOME_URL} element={<Home />} />
           <Route path={DESTINATION_URL} element={<Destination />} />

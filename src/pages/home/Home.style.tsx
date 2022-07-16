@@ -6,7 +6,7 @@ import {
   subHeading1,
   subHeading2,
 } from "../../styles/typography/subheaders.style";
-import { NavLink } from "../../components/navBar/NavBar.style";
+import { NavLink } from "../../components/navigation/Navigation.style";
 
 export const HomePageContainer = styled(PageContainer)`
   display: flex;
