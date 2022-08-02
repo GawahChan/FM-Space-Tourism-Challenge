@@ -1,6 +1,7 @@
 export const theme = {
   colours: {
     heading: "#FFFFFF",
+    headingNumber: "#716b6ba1",
     subHeading: "#D0D6F9",
     background: "#0b0D17",
     navText: "#FFFFFF",
@@ -10,6 +11,7 @@ export const theme = {
     secondary: "Barlow Condensed",
   },
   fontWeight: {
+    bolder: "bolder",
     regular: "normal",
   },
   fontSize: {
@@ -23,8 +25,8 @@ export const theme = {
     navText: "16px",
   },
   characterSpace: {
-    heading5: "4.75",
-    subheading2: "2.35",
+    heading5: "4.75px",
+    subheading2: "2.35px",
     navText: "2.7px",
   },
 };

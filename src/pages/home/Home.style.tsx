@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PageContainer } from "../pages.style";
+import { PageBodyContainer, PageContainer } from "../pages.style";
 import { device } from "../../utils/Constants";
 import { Heading1 } from "../../styles/typography/headers.style";
 import {
@@ -22,9 +22,7 @@ export const HomePageContainer = styled(PageContainer)`
   }
 `;
 
-export const HomePageBodyContainer = styled.div`
-  display: flex;
-  width: 100%;
+export const HomePageBodyContainer = styled(PageBodyContainer)`
   align-items: center;
   justify-content: center;
 `;

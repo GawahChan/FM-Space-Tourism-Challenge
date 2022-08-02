@@ -10,3 +10,8 @@ export const PageContainer = styled.div`
   box-sizing: border-box;
   padding: 110px 30px 30px 30px;
 `;
+
+export const PageBodyContainer = styled.div`
+  display: flex;
+  width: 100%;
+`;

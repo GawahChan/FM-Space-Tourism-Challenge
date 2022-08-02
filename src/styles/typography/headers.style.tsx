@@ -30,3 +30,11 @@ export const Heading5 = styled.h5`
   font-size: ${({ theme }) => theme.fontSize.heading5};
   letter-spacing: ${({ theme }) => theme.characterSpace.heading5};
 `;
+
+export const HeadingNumber = styled.h5`
+  font-family: ${({ theme }) => theme.typography.secondary};
+  font-weight: ${({ theme }) => theme.fontWeight.bolder};
+  font-size: ${({ theme }) => theme.fontSize.heading5};
+  letter-spacing: ${({ theme }) => theme.characterSpace.heading5};
+  color: ${({ theme }) => theme.colours.headingNumber};
+`;
