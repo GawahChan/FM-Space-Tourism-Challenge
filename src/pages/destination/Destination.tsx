@@ -1,27 +1,22 @@
+import DestinationDetails from "./destination-details/DestinationDetails";
 import {
-  DestinationPageBodyContainer,
+  DestinationBodyContainer,
   DestinationPageContainer,
-  DestinationPageHeaderNumber,
-  DestinationPageImageHeader,
-  DestinationPageImageHeaderContainer,
-  DestinationPageImageSection,
-  DestinationPagePlanetImage,
+  DestinationHeaderNumber,
+  DestinationHeader,
+  DestinationHeaderContainer,
 } from "./Destination.style";
 
 const Destination = () => {
   return (
     <DestinationPageContainer>
-      <DestinationPageBodyContainer>
-        <DestinationPageImageSection>
-          <DestinationPageImageHeaderContainer>
-            <DestinationPageHeaderNumber>01</DestinationPageHeaderNumber>
-            <DestinationPageImageHeader>
-              PICK YOUR DESTINATION
-            </DestinationPageImageHeader>
-          </DestinationPageImageHeaderContainer>
-          <DestinationPagePlanetImage planet="mars" />
-        </DestinationPageImageSection>
-      </DestinationPageBodyContainer>
+      <DestinationBodyContainer>
+        <DestinationHeaderContainer>
+          <DestinationHeaderNumber>01</DestinationHeaderNumber>
+          <DestinationHeader>PICK YOUR DESTINATION</DestinationHeader>
+        </DestinationHeaderContainer>
+        <DestinationDetails />
+      </DestinationBodyContainer>
     </DestinationPageContainer>
   );
 };

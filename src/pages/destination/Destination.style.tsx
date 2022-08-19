@@ -15,39 +15,21 @@ export const DestinationPageContainer = styled(PageContainer)`
   }
 `;
 
-export const DestinationPageBodyContainer = styled(PageBodyContainer)`
-  align-items: center;
-  justify-content: center;
+export const DestinationBodyContainer = styled(PageBodyContainer)`
+  flex-direction: column;
 `;
 
-export const DestinationPageImageSection = styled.div``;
-
-export const DestinationPageImageHeaderContainer = styled.div`
+export const DestinationHeaderContainer = styled.div`
   display: flex;
+  justify-content: start;
 `;
 
-export const DestinationPageImageHeader = styled(Heading5)`
-  color: ${({ theme }) => theme.colours.heading};
-  margin: 0;
-`;
-
-export const DestinationPageHeaderNumber = styled(HeadingNumber)`
+export const DestinationHeaderNumber = styled(HeadingNumber)`
   margin: 0;
   padding-right: 20px;
 `;
-export const DestinationPageImageContainer = styled.div``;
-interface DestinationPagePlanetImageProps {
-  readonly planet: String;
-}
 
-export const DestinationPagePlanetImage = styled.div<DestinationPagePlanetImageProps>`
-  background-image: ${(props) =>
-    `url(${require(`../../common/assets/destination/image-${props.planet}.png`)})`};
-
-  background-size: cover;
-  background-position: center;
-  box-sizing: border-box;
-
-  min-height: 500px;
-  min-width: 500px;
+export const DestinationHeader = styled(Heading5)`
+  color: ${({ theme }) => theme.colours.heading};
+  margin: 0;
 `;
