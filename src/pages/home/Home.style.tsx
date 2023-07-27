@@ -15,49 +15,55 @@ export const HomePageContainer = styled(PageContainer)`
 
   @media ${device.tablet} {
     background-image: url(${require("../../common/assets/home/background-home-tablet.jpg")});
+    flex-direction: column;
   }
 
   @media ${device.mobile} {
     background-image: url(${require("../../common/assets/home/background-home-mobile.jpg")});
+    padding: 0px;
   }
 `;
 
-export const HomePageBodyContainer = styled(PageBodyContainer)`
-  align-items: center;
-  justify-content: center;
-`;
-
 export const HomePageTextContainer = styled.div`
+  flex: 1;
   display: flex;
   flex-direction: column;
-  flex: 1;
-
   align-items: center;
+  justify-content: center;
 `;
 
-export const HomePageButtonContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const HomePageSubHeader = styled(subHeading1)`
+  color: ${({ theme }) => theme.colours.subHeading};
 
-  height: 150px;
-  width: 150px;
-
-  background: white;
-  border-radius: 50%;
+  @media ${device.mobile} {
+    font-size: ${({ theme }) => theme.fontSize.subheading2}
+  }
 `;
 
 export const HomePageHeader = styled(Heading1)`
   color: ${({ theme }) => theme.colours.heading};
   margin: 0;
-`;
 
-export const HomePageSubHeader = styled(subHeading1)`
-  color: ${({ theme }) => theme.colours.subHeading};
+  @media ${device.mobile} {
+    font-size: ${({ theme }) => theme.fontSize.heading2}
+  }
 `;
 
 export const HomePageParagraph = styled(subHeading2)`
   color: ${({ theme }) => theme.colours.subHeading};
+  width: 450px;
+  padding-left: 20px;
+
+  @media ${device.mobile} {
+    width: 320px;
+  }
+`;
+
+export const HomePageButtonContainer = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const HomeNavLink = styled(NavLink)`
@@ -65,6 +71,11 @@ export const HomeNavLink = styled(NavLink)`
   justify-content: center;
   align-items: center;
 
-  flex: 1;
+  height: 150px;
+  width: 150px;
+
   color: black;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
 `;
