@@ -12,6 +12,7 @@ export const theme = {
   },
   fontWeight: {
     bolder: "bolder",
+    bold: "bold",
     regular: "normal",
   },
   fontSize: {

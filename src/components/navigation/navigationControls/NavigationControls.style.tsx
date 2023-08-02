@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { device } from "../../../utils/Constants";
 import { NavLink } from "../Navigation.style";
+import { NavigationHeading, NavigationHeadingNumber } from "../../../styles/typography/headers.style";
 
 export const NavigationControlsContainer = styled.div`
   flex: 1;
@@ -42,16 +43,12 @@ export const NavBarLink = styled(NavLink)`
   }
 `;
 
-export const NavBarHeader = styled.h1`
+export const NavBarHeader = styled(NavigationHeading)`
   color: ${({ theme }) => theme.colours.navText};
-  font-family: ${({ theme }) => theme.typography.secondary};
-  font-size: ${({ theme }) => theme.fontSize.navText};
-  letter-spacing: ${({ theme }) => theme.characterSpace.navText};
-  font-weight: normal
 `;
 
-export const NavBarHeaderNumber = styled(NavBarHeader)`
-  font-weight: bold;
+export const NavBarHeaderNumber = styled(NavigationHeadingNumber)`
+  color: ${({ theme }) => theme.colours.navText};
   padding: 7px;
   box-sizing: border-box;
 
@@ -104,10 +101,11 @@ export const MenuPanelLink = styled (NavBarLink)`
   border-bottom: none;
 }
 `
-export const MenuPanelHeader = styled(NavBarHeader)`
+export const MenuPanelHeader = styled(NavigationHeading)`
+  color: ${({ theme }) => theme.colours.navText};
 `
-export const MenuPanelNumber = styled(MenuPanelHeader)`
-  font-weight: bold;
+export const MenuPanelNumber = styled(NavigationHeadingNumber)`
+  color: ${({ theme }) => theme.colours.navText};
   padding: 7px;
   box-sizing: border-box;
 `
