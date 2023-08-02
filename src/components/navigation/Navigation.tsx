@@ -5,7 +5,7 @@ import {
 } from "./Navigation.style";
 import { HOME_URL } from "../../utils/Constants";
 import Logo from "../../common/assets/shared/logo.svg";
-import NavBar from "./navBar/NavBar";
+import NavigationControls from "./navigationControls/NavigationControls";
 
 const Navigation = () => {
   return (
@@ -15,7 +15,7 @@ const Navigation = () => {
           <img src={Logo} alt="logo" />
         </NavLink>
       </NavLogoContainer>
-      <NavBar />
+      <NavigationControls />
     </NavigationContainer>
   );
 };
