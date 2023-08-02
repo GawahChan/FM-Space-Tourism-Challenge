@@ -10,6 +10,7 @@ import {
   NavBarContainer,
   NavBarLink,
   NavBarHeader,
+  NavBarHeaderNumber,
   NavMenuContainer,
   NavButtonContainer
 } from "./NavigationControls.style";
@@ -25,16 +26,20 @@ const NavigationControls = () => {
     <NavigationControlsContainer>
       <NavBarContainer>
         <NavBarLink to={HOME_URL}>
-          <NavBarHeader>00 HOME</NavBarHeader>
+          <NavBarHeaderNumber>00</NavBarHeaderNumber>
+          <NavBarHeader>HOME</NavBarHeader>
         </NavBarLink>
         <NavBarLink to={DESTINATION_URL}>
-          <NavBarHeader>01 DESTINATION</NavBarHeader>
+        <NavBarHeaderNumber>01</NavBarHeaderNumber>
+          <NavBarHeader>DESTINATION</NavBarHeader>
         </NavBarLink>
         <NavBarLink to={CREW_URL}>
-          <NavBarHeader>02 CREW</NavBarHeader>
+        <NavBarHeaderNumber>02</NavBarHeaderNumber>
+          <NavBarHeader>CREW</NavBarHeader>
         </NavBarLink>
         <NavBarLink to={TECHNOLOGY_URL}>
-          <NavBarHeader>03 TECHNOLOGY</NavBarHeader>
+        <NavBarHeaderNumber>03</NavBarHeaderNumber>
+          <NavBarHeader>TECHNOLOGY</NavBarHeader>
         </NavBarLink>
       </NavBarContainer>
       <NavMenuContainer>

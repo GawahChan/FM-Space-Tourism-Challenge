@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { device } from "../../../utils/Constants";
 import { NavLink } from "../Navigation.style";
 
@@ -6,7 +6,7 @@ export const NavigationControlsContainer = styled.div`
   flex: 1;
 
   @media ${device.tablet} {
-    flex: 2;
+    flex: 5;
   }
 `
 
@@ -33,9 +33,8 @@ export const NavBarLink = styled(NavLink)`
   display: flex;
   height: 100%;
   align-items: center;
-  height: 100%;
 
-  padding: 20px;
+  padding: 5px;
   box-sizing: border-box;
 
   :hover {
@@ -48,8 +47,18 @@ export const NavBarHeader = styled.h1`
   font-family: ${({ theme }) => theme.typography.secondary};
   font-size: ${({ theme }) => theme.fontSize.navText};
   letter-spacing: ${({ theme }) => theme.characterSpace.navText};
-  font-weight: normal;
+  font-weight: normal
 `;
+
+export const NavBarHeaderNumber = styled(NavBarHeader)`
+  font-weight: bold;
+  padding: 7px;
+  box-sizing: border-box;
+
+  @media ${device.tablet} {
+    display: none;
+  }
+`
 
 export const NavMenuContainer = styled.div`
   display: none;
@@ -65,7 +74,7 @@ export const NavMenuContainer = styled.div`
 `
 
 export const NavButtonContainer = styled.div<{ $display?: boolean }>`
-  display: ${props => props.$display? "flex": "none"};
+  display: ${props => props.$display? "flex" : "none"};
   box-sizing: border-box;
   padding: 20px 30px 30px 30px;
 `
