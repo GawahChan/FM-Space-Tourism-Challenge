@@ -4,7 +4,7 @@ export const CREW_URL = "/Crew";
 export const TECHNOLOGY_URL = "/Technology";
 
 const size = {
-  mobile: "425px",
+  mobile: "450px",
   tablet: "768px",
   laptop: "1024px",
 };

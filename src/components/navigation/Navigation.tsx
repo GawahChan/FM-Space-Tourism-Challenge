@@ -12,7 +12,7 @@ const Navigation = () => {
     <NavigationContainer>
       <NavLogoContainer>
         <NavLink to={HOME_URL}>
-          <img src={Logo} alt="logo" />
+          <img src={Logo} alt="Galactic Stelar Voyages Logo" />
         </NavLink>
       </NavLogoContainer>
       <NavigationControls />

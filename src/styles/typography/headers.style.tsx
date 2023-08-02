@@ -38,3 +38,17 @@ export const HeadingNumber = styled.h5`
   letter-spacing: ${({ theme }) => theme.characterSpace.heading5};
   color: ${({ theme }) => theme.colours.headingNumber};
 `;
+
+export const NavigationHeading = styled.h1`
+  font-family: ${({ theme }) => theme.typography.secondary};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  font-size: ${({ theme }) => theme.fontSize.navText};
+  letter-spacing: ${({ theme }) => theme.characterSpace.navText};
+`
+
+export const NavigationHeadingNumber = styled.h1`
+  font-family: ${({ theme }) => theme.typography.secondary};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  font-size: ${({ theme }) => theme.fontSize.navText};
+  letter-spacing: ${({ theme }) => theme.characterSpace.navText};
+`

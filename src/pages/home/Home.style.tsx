@@ -51,11 +51,20 @@ export const HomePageHeader = styled(Heading1)`
 
 export const HomePageParagraph = styled(subHeading2)`
   color: ${({ theme }) => theme.colours.subHeading};
+  line-height: ${({ theme }) => theme.lineHeight.subHeading1};
+  
   width: 450px;
-  padding-left: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  @media ${device.tablet} {
+    text-align: center;
+  }
 
   @media ${device.mobile} {
-    width: 320px;
+    width: auto;
+    padding: 15px;
+    line-height: ${({ theme }) => theme.lineHeight.subHeading2};
   }
 `;
 
