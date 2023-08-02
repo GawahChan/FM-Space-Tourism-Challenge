@@ -29,6 +29,10 @@ export const theme = {
     subheading2: "2.35px",
     navText: "2.7px",
   },
+  lineHeight: {
+    subHeading1: "32px",
+    subHeading2: "25px"
+  }
 };
 
 export type ThemeType = typeof theme;
