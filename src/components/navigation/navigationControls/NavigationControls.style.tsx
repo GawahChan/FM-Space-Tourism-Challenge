@@ -62,19 +62,52 @@ export const NavBarHeaderNumber = styled(NavBarHeader)`
 
 export const NavMenuContainer = styled.div`
   display: none;
-  width: 100%;
-  height: 100%;
 
   @media ${device.mobile} {
-    flex: 1;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    height: 100%;
+    width: 100%;
   }
 `
 
 export const NavButtonContainer = styled.div<{ $display?: boolean }>`
-  display: ${props => props.$display? "flex" : "none"};
+  display: ${props => props.$display? "fixed" : "none"};
   box-sizing: border-box;
   padding: 20px 30px 30px 30px;
+  z-index: 1;
+`
+
+export const NavMenuPanel = styled.div<{ $display?: boolean }>`
+  position: fixed;
+  top: 0;
+  right: ${props => props.$display? "0" : "-300px"};
+  width: 200px;
+  height: 100%;
+  background-color: #1a1a2279;
+  backdrop-filter: blur(10px);
+`
+
+export const MenuPanelOptions = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0px 100px 20px;
+  box-sizing: border-box;
+`
+
+export const MenuPanelLink = styled (NavBarLink)`
+:hover {
+  border-right: 3px solid ${({ theme }) => theme.colours.navText};
+  border-bottom: none;
+}
+`
+export const MenuPanelHeader = styled(NavBarHeader)`
+`
+export const MenuPanelNumber = styled(MenuPanelHeader)`
+  font-weight: bold;
+  padding: 7px;
+  box-sizing: border-box;
 `
