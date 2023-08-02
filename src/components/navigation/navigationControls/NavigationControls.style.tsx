@@ -2,18 +2,30 @@ import styled from "styled-components";
 import { device } from "../../../utils/Constants";
 import { NavLink } from "../Navigation.style";
 
-export const NavBarContainer = styled.div`
-  display: flex;
+export const NavigationControlsContainer = styled.div`
   flex: 1;
-  justify-content: space-evenly;
-  align-items: center;
-
-  box-sizing: border-box;
-  backdrop-filter: blur(10px);
 
   @media ${device.tablet} {
     flex: 2;
+  }
+`
+
+export const NavBarContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  backdrop-filter: blur(10px);
+
+  @media ${device.tablet} {
     background-color: #1a1a2279;
+  }
+
+  @media ${device.mobile} {
+    display: none;
   }
 `;
 
@@ -25,16 +37,16 @@ export const NavBarHeader = styled.h1`
   font-weight: normal;
 `;
 
-export const NavBarHeaderContainer = styled.div`
+export const NavBarLink = styled(NavLink)`
   display: flex;
   height: 100%;
   align-items: center;
+  height: 100%;
+
+  padding: 10px;
+  box-sizing: border-box;
 
   :hover {
     border-bottom: 3px solid ${({ theme }) => theme.colours.navText};
   }
-`;
-
-export const NavBarLink = styled(NavLink)`
-  height: 100%;
 `;
