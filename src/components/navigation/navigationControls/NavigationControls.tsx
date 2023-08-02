@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   CREW_URL,
   DESTINATION_URL,
@@ -5,13 +6,21 @@ import {
   TECHNOLOGY_URL,
 } from "../../../utils/Constants";
 import {
-  NavBarContainer,
-  NavBarHeader,
-  NavBarLink,
   NavigationControlsContainer,
+  NavBarContainer,
+  NavBarLink,
+  NavBarHeader,
+  NavMenuContainer,
+  NavButtonContainer
 } from "./NavigationControls.style";
+import HamburgerIcon from "../../../common/assets/shared/icon-hamburger.svg";
+import CloseIcon from "../../../common/assets/shared/icon-close.svg";
 
 const NavigationControls = () => {
+  const [menuVisbility, setMenuVisbility] = useState(false)
+
+  console.log(menuVisbility)
+
   return (
     <NavigationControlsContainer>
       <NavBarContainer>
@@ -28,6 +37,22 @@ const NavigationControls = () => {
           <NavBarHeader>03 TECHNOLOGY</NavBarHeader>
         </NavBarLink>
       </NavBarContainer>
+      <NavMenuContainer>
+        <NavButtonContainer
+          id="hamburger_menu_icon"
+          $display={menuVisbility}
+          onClick={() => setMenuVisbility(!menuVisbility)}
+        >
+          <img src={HamburgerIcon} alt="Menu Icon" />
+        </NavButtonContainer>
+        <NavButtonContainer
+          id="close_menu_icon"
+          $display={!menuVisbility}
+          onClick={() => setMenuVisbility(!menuVisbility)}
+        >
+          <img src={CloseIcon} alt="Close Menu Icon" />
+        </NavButtonContainer>
+      </NavMenuContainer>
     </NavigationControlsContainer>
   );
 };

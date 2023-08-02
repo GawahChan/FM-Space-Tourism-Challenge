@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { device } from "../../../utils/Constants";
 import { NavLink } from "../Navigation.style";
 
@@ -29,6 +29,20 @@ export const NavBarContainer = styled.div`
   }
 `;
 
+export const NavBarLink = styled(NavLink)`
+  display: flex;
+  height: 100%;
+  align-items: center;
+  height: 100%;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  :hover {
+    border-bottom: 3px solid ${({ theme }) => theme.colours.navText};
+  }
+`;
+
 export const NavBarHeader = styled.h1`
   color: ${({ theme }) => theme.colours.navText};
   font-family: ${({ theme }) => theme.typography.secondary};
@@ -37,16 +51,21 @@ export const NavBarHeader = styled.h1`
   font-weight: normal;
 `;
 
-export const NavBarLink = styled(NavLink)`
-  display: flex;
-  height: 100%;
-  align-items: center;
+export const NavMenuContainer = styled.div`
+  display: none;
+  width: 100%;
   height: 100%;
 
-  padding: 10px;
-  box-sizing: border-box;
-
-  :hover {
-    border-bottom: 3px solid ${({ theme }) => theme.colours.navText};
+  @media ${device.mobile} {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
-`;
+`
+
+export const NavButtonContainer = styled.div<{ $display?: boolean }>`
+  display: ${props => props.$display? "flex": "none"};
+  box-sizing: border-box;
+  padding: 20px 30px 30px 30px;
+`
