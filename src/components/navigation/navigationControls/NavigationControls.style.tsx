@@ -4,7 +4,7 @@ import { NavLink } from "../Navigation.style";
 import { NavigationHeading, NavigationHeadingNumber } from "../../../styles/typography/headers.style";
 
 export const NavigationControlsContainer = styled.div`
-  flex: 1;
+  flex: 1.5;
 
   @media ${device.tablet} {
     flex: 5;
@@ -19,10 +19,17 @@ export const NavBarContainer = styled.div`
   width: 100%;
   height: 100%;
 
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
+  background-color: #ffffff04;
+
+  padding-left: 30px;
+  padding-right: 50px;
+  box-sizing: border-box;
 
   @media ${device.tablet} {
     background-color: #1a1a2279;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   @media ${device.mobile} {
@@ -85,7 +92,7 @@ export const NavMenuPanel = styled.div<{ $display?: boolean }>`
   width: 200px;
   height: 100%;
   background-color: #1a1a2279;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
 `
 
 export const MenuPanelOptions = styled.div`
